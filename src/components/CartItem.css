@@ -1,0 +1,39 @@
+.cart-contaiener{
+    display: flex;
+}
+.CartItem-image{
+   
+    
+}
+
+.CartItem-image img{
+    background-size: cover;
+    height: 150px;
+}
+
+.CartItem-info{
+  flex: 0.9;
+  margin-left: 20px;
+    
+}
+.stockinfo{
+    display: flex;
+    flex-direction: column;
+    margin-top: -30px;
+    margin-left: 10px;
+}
+
+.items-action{
+    display: flex;
+}
+.quantity-select{
+    background-color: rgb(158, 158, 173);
+ font-size: 15px;
+ padding-left: 10px;
+ margin-right: 10px;
+ border-radius: 5px;
+}
+.cartitem-price{
+ flex: 0.1;
+}
+

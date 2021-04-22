@@ -1,5 +1,13 @@
+body{
+    background-color: #EAEADE;
+}
 .App-header{
     background-color: steelblue;
     display: flex;
     justify-content: center;
 }
+
+.main-container{
+    display: flex;
+}
+

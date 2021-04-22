@@ -1,0 +1,8 @@
+.cart-container{
+    
+    flex: 0.7;
+    background-color: #fefefe;
+  
+    margin: 15px 20px 0px 20px;
+    padding: 10px;
+}
