@@ -10,8 +10,7 @@ function Header({title}) {
             <h1>{title} </h1>
           </div>
          <div className='main-container'>
-             <CartItems/>
-             <CartTotal/>
+            
         
      </div>
     </div>

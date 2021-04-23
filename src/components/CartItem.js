@@ -1,34 +1,57 @@
 import React from 'react'
 import './CartItem.css'
 
-function CartItem() {
-    return (
-        <div className='cart-contaiener'>
+
+function CartItem({items}) {
+
+
+const showcart=(items)=>{
+  return  items.map((item)=>{
+        console.log(item.title)
+        return(
+            <div className='cart-contaiener'>
+           
                <div className="CartItem-image">
-                <img src='https://ss7.vzw.com/is/image/VerizonWireless/ipad-pro-11-in-cellular-space-gray?fmt=pjpg'></img>
+                <img src={`${process.env.PUBLIC_URL}/items/${item.image}`}></img>
                  </div>
             <div className='CartItem-info'>
-                <h2>Apple iPad Pro</h2>
+                <div className='info-title'>  <h2>{item.title}</h2></div>
+              
                 <div className="stockinfo">
-                    <p>In Stock</p>
+                    <p>{item.stock}</p>
                     <div className='items-action'>
                         <div className='item-quantity'>
-                            <select name="quantity" className='quantity-select'>
-                                <option>qua:1</option>
+                            <select name="quantity" value={item.quantity} className='quantity-select'>
+                                <option value="1">Qua:1</option>
+                                <option value="2">Qua:2</option>
+                                <option value="3">Qua:3</option>
+                                <option value="4">Qua:4</option>
                             </select>
                         </div>
-                        
+                        <div >|</div>
                         <div className="item-delete">
-                            <button>delete</button>
+                            delete
                         </div>
 
                     </div>
                 </div>
             </div>
             <div className='cartitem-price'>
-                $2222
+                ${item.price}
             </div>
         </div>
+        )
+
+
+    })
+
+}
+
+    return (
+        <div>
+            {showcart(items)}
+        </div>
+        
     )
 }
 
