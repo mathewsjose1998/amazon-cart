@@ -2,7 +2,7 @@ import React from 'react'
 import './CartItem.css'
 console.log("dsd")
 
-function CartItem({ item,index, ChangeItemQuantity}) {
+function CartItem({ item,index, ChangeItemQuantity,deleteItem}) {
     console.log(item)
     
 
@@ -28,7 +28,7 @@ function CartItem({ item,index, ChangeItemQuantity}) {
                      </select>
                  </div>
                  <div >|</div>
-                 <div className="item-delete">
+                 <div className="item-delete" onClick={(e)=>{deleteItem(index)}}>
                      delete
                  </div>
 

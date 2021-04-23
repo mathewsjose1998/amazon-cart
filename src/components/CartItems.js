@@ -21,6 +21,22 @@ setCartItems(newItem)
 
     }
 
+const deleteItem=(indextodelete)=>{
+console.log('deleted')
+
+const newItems=items.filter((value,index)=>{
+    return index!=indextodelete;
+    
+   
+})
+
+setCartItems(newItems)
+
+
+
+
+}
+
   
 
     console.log(items)
@@ -36,6 +52,7 @@ setCartItems(newItem)
                 item={item}
                 key={index}
                 ChangeItemQuantity={ChangeItemQuantity}
+                deleteItem={deleteItem}
                 />
 
               
