@@ -3,11 +3,15 @@ import './CartItem.css'
 
 
 function CartItem({items}) {
-
+    let sum=0;
 
 const showcart=(items)=>{
   return  items.map((item)=>{
         console.log(item.title)
+        
+       
+        
+
         return(
             <div className='cart-contaiener'>
            
@@ -50,6 +54,7 @@ const showcart=(items)=>{
     return (
         <div>
             {showcart(items)}
+            
         </div>
         
     )
