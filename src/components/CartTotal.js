@@ -1,9 +1,11 @@
 import React from 'react'
 import './CartTotal.css'
 
+import NumberFormat from 'react-number-format'
+
 let itemnum=0
 function CartTotal({items}) {
-    itemnum=items.length
+   
     let total=0
     const getTotalPrice=(items)=>{
         if(items){
@@ -11,9 +13,10 @@ function CartTotal({items}) {
                  console.log(item.quantity )
                  console.log(item.price)
                 total+=(item.price*item.quantity)
+                itemnum+=item.quantity
                 console.log(total)
              })
-             return parseInt(total)
+             return total
             
         }
         
@@ -23,7 +26,7 @@ function CartTotal({items}) {
   
          <div className="cartTotal">
              <div className='subtotal-container'>
-             <h2>SubTotal ({itemnum} items) : <span className='carttotal-price'>${getTotalPrice(items)}</span></h2>     
+             <h2>SubTotal ({itemnum} items) : <span className='carttotal-price'><NumberFormat value={getTotalPrice(items)} displayType={'text'} decimalScale='2' thousandSeparator={true} prefix={'$'} /></span></h2>     
              </div>
              <div className="checkout-container">
                  <div className='checkout'>Proceed to Checkout</div>
